@@ -29,10 +29,12 @@ function serviceCardHTML(s){
 }
 
 function masonryItemHTML(item, index){
-  const w = item.w || 800, h = item.h || 1000;
+  // Display grid now uses a fixed 4:5 tile (object-fit:cover), so intrinsic
+  // width/height attributes are normalized to that ratio for correct CLS
+  // reservation regardless of the source photo's native aspect ratio.
   return (
     '<figure class="masonry-item" data-cat="' + item.cat + '" data-idx="' + index + '">' +
-      '<img src="' + item.src + '" alt="' + item.cat + ' event styling — placeholder photo" loading="lazy" width="' + w + '" height="' + h + '">' +
+      '<img src="' + item.src + '" alt="' + item.cat + ' event styling — placeholder photo" loading="lazy" width="800" height="1000">' +
       '<div class="overlay"><span>View</span></div>' +
     '</figure>'
   );
