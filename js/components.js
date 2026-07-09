@@ -31,7 +31,7 @@ function serviceCardHTML(s){
 function masonryItemHTML(item, index){
   const w = item.w || 800, h = item.h || 1000;
   return (
-    '<figure class="masonry-item reveal" data-cat="' + item.cat + '" data-idx="' + index + '">' +
+    '<figure class="masonry-item" data-cat="' + item.cat + '" data-idx="' + index + '">' +
       '<img src="' + item.src + '" alt="' + item.cat + ' event styling — placeholder photo" loading="lazy" width="' + w + '" height="' + h + '">' +
       '<div class="overlay"><span>View</span></div>' +
     '</figure>'
